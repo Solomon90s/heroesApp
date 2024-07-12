@@ -30,14 +30,25 @@
     </button>
 
     <span class="spacer"></span>
+    
+    <span>{{ user?.email }}</span>
 
-    <button mat-button>
+    <button mat-button
+    (click)="onLogout()"
+    >
       Logout
     </button>
 
+    <img
+    class="miIcono"
+    src="favicon.ico"
+    alt="icono"
+    routerLink="list"
+    >
+
   </mat-toolbar>
 
-  <div class="container">
+  <div class="container p-2">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
